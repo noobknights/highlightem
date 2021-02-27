@@ -9,8 +9,5 @@
 		"default_popup": "popup.html"
 	},
 	"permissions": ["activeTab", "storage", "scripting", "tabs"],
-	"host_permissions": ["<all_urls>"],
-	"background": {
-		"service_worker": "background.js"
-	}
+	"host_permissions": ["<all_urls>"]
 }
