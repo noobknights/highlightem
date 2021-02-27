@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import json
+from model.model_nlp import Similar
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -13,7 +14,9 @@ def index():
         data = json.loads(request.data)
         # print(data["query"])
         # print(data["items"])
-        mydata = [1, 2]
+        query = data["query"]
+        items = data["items"]
+        ans = Similar(query, items)
         return jsonify({"ans": mydata}), 200
     else:
-        return jsonify({"test": "-1"}), 200
+        return "welcome to highlightem", 200
