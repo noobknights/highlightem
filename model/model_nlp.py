@@ -3,6 +3,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
+
 def txt_to_list(path):
     import re
     file = open(path,'r')
@@ -42,7 +43,7 @@ def Similar(query,items):
     if(len(similar_scores)>5):
         similar_scores=similar_scores[0:5]
     else:
-        similar_scores=similar_scores[:]
-    root_indices=[i[0] for i in similar_scores]
+        similar_scores = similar_scores[:]
+    root_indices = [i[0] for i in similar_scores]
     index_to_send.append(root_indices)
     return np.array(index_to_send).flatten()
