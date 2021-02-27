@@ -17,6 +17,6 @@ def index():
         query = data["query"]
         items = data["items"]
         ans = Similar(query, items)
-        return jsonify({"ans": mydata}), 200
+        return jsonify({"ans": ans}), 200
     else:
         return "welcome to highlightem", 200

@@ -29,4 +29,5 @@ def Similar(query, items):
         similar_scores = similar_scores[:]
     root_indices = [i[0] for i in similar_scores]
     index_to_send.append(root_indices)
-    return np.array(index_to_send).flatten()
+    print(index_to_send)
+    return list(index_to_send)[0]
