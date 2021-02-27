@@ -17,7 +17,3 @@ def index():
         return jsonify({"ans": mydata}), 200
     else:
         return jsonify({"test": "-1"}), 200
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
