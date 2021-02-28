@@ -20,3 +20,8 @@ Chrome extension to highlight relevant items based on your search query.
 - Select `extension` dir
 
 You will see the extension is loaded and ready-to-use.
+
+### Links to PPT and Video 
+
+- [Presentation Link](https://1drv.ms/p/s!AmlYsveyZVRxjVYM9pPGWOuGOOvu?e=YihZoR)
+- [Video Link](https://drive.google.com/file/d/1I2_CM5TDKO4WeiaewaPmFnoKF0efsA9E/view?usp=sharing)
