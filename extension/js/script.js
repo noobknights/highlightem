@@ -1,7 +1,7 @@
 let startBtn = document.getElementById("start");
 
 async function start() {
-	const url = "http://127.0.0.1:8000";
+	const url = "https://cac0adc00c27.ngrok.io";
 
 	class AllBrand {
 		constructor(data) {
