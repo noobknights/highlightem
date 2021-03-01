@@ -1,7 +1,17 @@
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+from text import Tokenizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+
+def pad_sequences(x_encoded,max_len):    
+    x_padded=[]
+    for j in range(len(x_encoded)):
+        k=np.zeros((max_len),dtype=int)
+        count=0
+        for i in range(max_len-len(x_encoded[j]),max_len):
+            k[i]=x_encoded[j][count]
+            count+=1
+        x_padded.append(k)
+    return x_padded
 
 
 def txt_to_list(path):
@@ -35,10 +45,10 @@ def Similar(query, items):
     y_encoded = word_tokenizer_stop.texts_to_sequences([query])
     max_len = len(word_tokenizer_stop.word_index)
     X_padded = pad_sequences(
-        x_encoded, maxlen=max_len, padding="pre", truncating="post"
+        x_encoded, max_len=max_len
     )
     Y_padded = pad_sequences(
-        y_encoded, maxlen=max_len, padding="pre", truncating="post"
+        y_encoded, max_len=max_len
     )
     cosine_sim = cosine_similarity(Y_padded, X_padded)
     main_index = np.argmax(cosine_sim)
