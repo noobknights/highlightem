@@ -27,7 +27,7 @@ def txt_to_list(path):
 
 
 def Similar(query, items):
-    stopwords = txt_to_list("../hacksol/model/stopwords.txt")
+    stopwords = txt_to_list("./model/stopwords.txt")
     text = []
     index_to_send = []
     word_tokenizer = Tokenizer()

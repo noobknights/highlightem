@@ -20,3 +20,7 @@ def index():
         return jsonify({"ans": ans}), 200
     else:
         return "welcome to highlightem", 200
+
+
+if __name__ == "__main__":
+    app.run()
