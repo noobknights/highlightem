@@ -1,4 +1,4 @@
-from text import Tokenizer
+from .text import Tokenizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
