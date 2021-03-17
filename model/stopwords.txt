@@ -5,6 +5,7 @@ save
 extra
 savings
 cashback
+get
 off
 percent
 sponsor
